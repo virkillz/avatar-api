@@ -4,6 +4,7 @@ defmodule HashColorAvatar do
   @default_size 100
   @default_saturation 50
   @default_value 90
+  @default_border 4  
 
   use Bitwise
 
@@ -140,6 +141,7 @@ defmodule HashColorAvatar do
     color = Keyword.get(options, :color, @default_color)
     shape = Keyword.get(options, :shape, @default_shape)
     size = Keyword.get(options, :size, @default_size)
+    border = Keyword.get(options, :border, @default_border)    
 
     fontsize = size / 2.4
 
@@ -169,7 +171,7 @@ defmodule HashColorAvatar do
           size
         }" height="#{size}" viewBox="300" enable-background="new 5 24.366 90 61.125" xml:space="preserve"><circle cx="#{
           diameter
-        }" cy="#{diameter}" r="#{diameter}" stroke="white" stroke-width="4" fill="#{
+        }" cy="#{diameter}" r="#{diameter}" stroke="white" stroke-width="#{border}" fill="#{
           background_color
         }" ></circle><text fill="white" x="50%" y="67%" text-anchor="middle" style="font: bold #{
           fontsize

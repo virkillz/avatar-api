@@ -10,19 +10,20 @@ defmodule AvatarApiWeb.PageController do
     shape = params["shape"]
     color = params["color"]
     size = params["size"] |> parse_number
+    border = params["border"] |> parse_border  
 
     key = conn.query_string
 
     return =
       case Cachex.get(:my_cache, key) do
         {:ok, nil} ->
-          HashColorAvatar.gen_avatar(name, shape: shape, color: color, size: size) |> cache(key)
+          HashColorAvatar.gen_avatar(name, shape: shape, color: color, size: size, border: border) |> cache(key)
 
         {:ok, something} ->
           something
 
         _other ->
-          HashColorAvatar.gen_avatar(name, shape: shape, color: color, size: size) |> cache(key)
+          HashColorAvatar.gen_avatar(name, shape: shape, color: color, size: size, border: border) |> cache(key)
       end
 
     conn
@@ -33,6 +34,17 @@ defmodule AvatarApiWeb.PageController do
   def cache(value, key) do
     Cachex.put(:my_cache, key, value)
     value
+  end
+
+  defp parse_border(nil) do
+    5
+  end
+
+  defp parse_border(string) do
+    case Integer.parse(string) do
+      {integer, _} -> integer
+      :error -> 5
+    end
   end
 
   defp parse_number(nil) do
