@@ -1,5 +1,12 @@
 # AvatarApi
 
+
+
+``` 
+MIX_ENV=prod PORT=4000 elixir -pa _build/prod/consolidated -S mix phx.server
+```
+
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
