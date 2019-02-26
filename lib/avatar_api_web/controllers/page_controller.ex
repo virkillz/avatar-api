@@ -6,11 +6,12 @@ defmodule AvatarApiWeb.PageController do
   end
 
   def avatar(conn, params) do
+  	IO.inspect(params)
     name = params["name"]
     shape = params["shape"]
     color = params["color"]
     size = params["size"] |> parse_number
-    border = params["border"] |> parse_border  
+    border = params["border"] |> parse_border 
 
     key = conn.query_string
 

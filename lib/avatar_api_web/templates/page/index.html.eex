@@ -80,7 +80,7 @@
               <div class="col-lg-3 order-lg-2">
                 <div class="card-profile-image">
                   <a href="#">
-                    <img src="https://avatar-api.org/avatar.svg?size=300" class="rounded-circle">
+                    <img src="https://avatar-api.org/avatar.svg?size=300&border=20" class="rounded-circle">
                   </a>
                 </div>
               </div>               
