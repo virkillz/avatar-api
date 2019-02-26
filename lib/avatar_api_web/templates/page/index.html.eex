@@ -175,22 +175,22 @@
 
               <p style="font-size: 1.2em; padding: 40px;">Pass <code>&shape=square</code> to generate square avatar instead of circle. </p>             
 
-              <code>https://avatar-api.org/avatar.svg?name=Dian Sastro Wardoyo&shape=square</code> <i class="fa fa-long-arrow-right"></i> will generate <img src="https://avatar-api.org/avatar.svg?name=Dian Sastro Wardoyo&shape=rect">
+              <code>https://avatar-api.org/avatar.svg?name=Dian Sastro Wardoyo&shape=square</code> <i class="fa fa-long-arrow-right"></i> will generate <img src="https://avatar-api.org/avatar.svg?name=Dian Sastro Wardoyo&shape=square">
 
             <div class="text-center" style="padding: 30px; font-size: 1.3em; font-weight: 500;">Other example</div>
 
             <div class="row" style="margin: 0px 50px;">
                   <div class="col-sm" style="margin:10px;">
-                    <img src="https://avatar-api.org/avatar.svg?&shape=rect&name=Arazka Abrizan" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Arazka Abrizan">
+                    <img src="https://avatar-api.org/avatar.svg?&shape=square&name=Arazka Abrizan" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Arazka Abrizan">
                   </div>
                   <div class="col-sm" style="margin:10px;">
-                    <img src="https://avatar-api.org/avatar.svg?&shape=rect&name=Elyn Abrizan" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Elyn Abrizan">
+                    <img src="https://avatar-api.org/avatar.svg?&shape=square&name=Elyn Abrizan" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Elyn Abrizan">
                   </div>
                   <div class="col-sm" style="margin:10px;">
-                    <img src="https://avatar-api.org/avatar.svg?&shape=rect&name=Kayla Abrizan" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Kayla Abrizan">
+                    <img src="https://avatar-api.org/avatar.svg?&shape=square&name=Kayla Abrizan" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Kayla Abrizan">
                   </div>
                   <div class="col-sm" style="margin:10px;">
-                    <img src="https://avatar-api.org/avatar.svg?&shape=rect&name=VirKill Abrizan" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Virkill Abrizan">
+                    <img src="https://avatar-api.org/avatar.svg?&shape=square&name=VirKill Abrizan" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Virkill Abrizan">
                   </div>             
             </div>              
             
@@ -207,16 +207,16 @@
 
             <div class="row" style="margin: 0px 50px;">
                   <div class="col-sm" style="margin:10px;">
-                    <img src="https://avatar-api.org/avatar.svg?&shape=rect&name=Tamara&color=black" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Tamara&color=black">
+                    <img src="https://avatar-api.org/avatar.svg?&shape=square&name=Tamara&color=black" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Tamara&color=black">
                   </div>
                   <div class="col-sm" style="margin:10px;">
-                    <img src="https://avatar-api.org/avatar.svg?&shape=rect&name=Xavier&color=teal" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Xavier&color=teal">
+                    <img src="https://avatar-api.org/avatar.svg?&shape=square&name=Xavier&color=teal" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Xavier&color=teal">
                   </div>
                   <div class="col-sm" style="margin:10px;">
-                    <img src="https://avatar-api.org/avatar.svg?&shape=rect&name=Alberto&color=grey" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Alberto&color=grey">
+                    <img src="https://avatar-api.org/avatar.svg?&shape=square&name=Alberto&color=grey" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Alberto&color=grey">
                   </div>
                   <div class="col-sm" style="margin:10px;">
-                    <img src="https://avatar-api.org/avatar.svg?&shape=rect&name=alberto&color=random" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=albert&color=random">
+                    <img src="https://avatar-api.org/avatar.svg?&shape=square&name=alberto&color=random" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=albert&color=random">
                   </div>             
             </div>              
             

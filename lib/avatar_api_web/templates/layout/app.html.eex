@@ -7,8 +7,14 @@
   <meta name="description" content="Start your development with a Design System for Bootstrap 4.">
   <meta name="author" content="VirKill">
   <title>Avatar api - Dynamically create SVG avatar on the fly</title>
+
+<meta property="og:title" content="Avatar Generator Api " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.avatar-api.org/" />
+<meta property="og:image" content="http://avatar-api.org/avatar.svg?size=300" />
+<meta property="og:description" content="Ultra fast default avatar generator api with erlang." />  
   <!-- Favicon -->
-  <link href="/assets/img/brand/favicon.png" rel="icon" type="image/png">
+  <link href="/avatar.svg?size=32" rel="icon" type="image/svg">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
   <!-- Icons -->
