@@ -195,18 +195,7 @@ defmodule HashColorAvatar do
         custom -> custom
       end
 
-    case shape do
-      "set1" ->
-        '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{
-          size
-        }" height="#{size}" enable-background="new 5 24.366 90 61.125" xml:space="preserve"><circle cx="#{
-          diameter
-        }" cy="#{diameter}" r="#{diameter}" stroke="white" stroke-width="#{border}" fill="#{
-          background_color
-        }" ></circle><text fill="white" x="50%" y="67%" text-anchor="middle" style="font: bold #{
-          fontsize
-        }px sans-serif;" >#{get_initial(text)}</text></svg>'        
-
+    case shape do       
 
       "set2" ->
         {color1, color2} = random_color_pair("analogous")
@@ -272,7 +261,7 @@ defmodule HashColorAvatar do
           fontsize
         }px sans-serif;" >#{get_initial(text)}</text></svg>' 
 
-      _other ->
+      "set7" ->
 
         '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{
           size
@@ -282,6 +271,17 @@ defmodule HashColorAvatar do
           fontsize
         }px sans-serif;" >#{get_initial(text)}</text></svg>'        
 
+
+      set1 ->
+        '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{
+          size
+        }" height="#{size}" enable-background="new 5 24.366 90 61.125" xml:space="preserve"><circle cx="#{
+          diameter
+        }" cy="#{diameter}" r="#{diameter}" stroke="white" stroke-width="#{border}" fill="#{
+          background_color
+        }" ></circle><text fill="white" x="50%" y="67%" text-anchor="middle" style="font: bold #{
+          fontsize
+        }px sans-serif;" >#{get_initial(text)}</text></svg>' 
     end
   end
 
