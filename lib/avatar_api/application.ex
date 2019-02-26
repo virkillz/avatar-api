@@ -10,7 +10,7 @@ defmodule AvatarApi.Application do
     children = [
       # Start the endpoint when the application starts
       supervisor(AvatarApiWeb.Endpoint, []),
-            worker(Cachex, [:my_cache, []])
+      worker(Cachex, [:my_cache, []])
       # Start your own worker by calling: AvatarApi.Worker.start_link(arg1, arg2, arg3)
       # worker(AvatarApi.Worker, [arg1, arg2, arg3]),
     ]

@@ -56,7 +56,6 @@ defmodule HashColorAvatar do
     hsv_to_rgb(%{hue: hue_value, saturation: saturation, value: value}) |> rgb_to_hex
   end
 
-
   @doc """
   This function will convert HSV map to RGB map.
 
@@ -123,9 +122,9 @@ defmodule HashColorAvatar do
       
   ## Option
   **:color** can be used to specify background color. By default it will generate hash based on the text given. It will be unique-ish since there are only 359 possible color and there's a chance it looks similar one amongst the other. For the value you can choose "random", any color code recognized by CSS such as "teal", "tomato", also it accept hex code.
-  
+
   **:shape** by default is circle. You can also choose "rect" for rectangle avatar.
-  
+
   **:size** You can define how many pixel height and width. Default is 100
 
   ## Examples
@@ -157,12 +156,24 @@ defmodule HashColorAvatar do
 
     case shape do
       "rect" ->
-        '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{size}" height="#{size}" viewBox="300" enable-background="new 5 24.366 90 61.125" xml:space="preserve"><rect width="#{size}" height="#{size}" fill="#{background_color}" ></rect><text fill="white" x="50%" y="65%" text-anchor="middle" style="font: bold #{fontsize}px sans-serif;" >#{get_initial(text)}</text></svg>'
+        '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{
+          size
+        }" height="#{size}" viewBox="300" enable-background="new 5 24.366 90 61.125" xml:space="preserve"><rect width="#{
+          size
+        }" height="#{size}" fill="#{background_color}" ></rect><text fill="white" x="50%" y="65%" text-anchor="middle" style="font: bold #{
+          fontsize
+        }px sans-serif;" >#{get_initial(text)}</text></svg>'
 
       _other ->
-        '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{size}" height="#{size}" viewBox="300" enable-background="new 5 24.366 90 61.125" xml:space="preserve"><circle cx="#{diameter}" cy="#{diameter}" r="#{diameter}" stroke="white" stroke-width="4" fill="#{
-          background_color}" ></circle><text fill="white" x="50%" y="67%" text-anchor="middle" style="font: bold #{fontsize}px sans-serif;" >#{
-          get_initial(text)}</text></svg>'
+        '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{
+          size
+        }" height="#{size}" viewBox="300" enable-background="new 5 24.366 90 61.125" xml:space="preserve"><circle cx="#{
+          diameter
+        }" cy="#{diameter}" r="#{diameter}" stroke="white" stroke-width="4" fill="#{
+          background_color
+        }" ></circle><text fill="white" x="50%" y="67%" text-anchor="middle" style="font: bold #{
+          fontsize
+        }px sans-serif;" >#{get_initial(text)}</text></svg>'
     end
   end
 
