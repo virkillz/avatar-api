@@ -1,6 +1,6 @@
 defmodule HashColorAvatar do
   @default_color :pastel
-  @default_shape :circle
+  @default_set "set1"
   @default_size 100
   @default_saturation 50
   @default_value 90
@@ -178,7 +178,7 @@ defmodule HashColorAvatar do
     text = if rawtext == nil, do: "V K", else: rawtext
 
     color = Keyword.get(options, :color, @default_color)
-    shape = Keyword.get(options, :shape, @default_shape)
+    set = Keyword.get(options, :set, @default_set)
     size = Keyword.get(options, :size, @default_size)
     border = Keyword.get(options, :border, @default_border)    
 
@@ -195,7 +195,7 @@ defmodule HashColorAvatar do
         custom -> custom
       end
 
-    case shape do       
+    case set do       
 
       "set2" ->
         {color1, color2} = random_color_pair("analogous")
