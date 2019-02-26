@@ -6,7 +6,6 @@ defmodule AvatarApiWeb.PageController do
   end
 
   def avatar(conn, params) do
-  	IO.inspect(params)
     name = params["name"]
     shape = params["shape"]
     color = params["color"]
