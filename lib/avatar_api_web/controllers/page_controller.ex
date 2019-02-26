@@ -2,29 +2,41 @@ defmodule AvatarApiWeb.PageController do
   use AvatarApiWeb, :controller
 
   def index(conn, _params) do
-    render(conn, "index.html")
+
+  generated =
+  	case Cachex.get(:my_cache, "generated") do
+  		{:ok, nil} -> 1
+  		{:ok, value} -> value
+  		_other -> 1
+  	end
+    render(conn, "index.html", generated: generated)
   end
 
   def avatar(conn, params) do
+  	Cachex.incr(:my_cache, "generated", 1, initial: 3000)
     name = params["name"]
-    shape = params["shape"]
+    set = params["set"]
     color = params["color"]
     size = params["size"] |> parse_number
     border = params["border"] |> parse_border 
 
     key = conn.query_string
 
-    return =
-      case Cachex.get(:my_cache, key) do
-        {:ok, nil} ->
-          HashColorAvatar.gen_avatar(name, shape: shape, color: color, size: size, border: border) |> cache(key)
+	return =
+    case color do
+    	"random" -> HashColorAvatar.gen_avatar(name, set: set, color: color, size: size, border: border)
+    	_else -> 
+		      case Cachex.get(:my_cache, key) do
+		        {:ok, nil} ->
+		          HashColorAvatar.gen_avatar(name, set: set, color: color, size: size, border: border) |> cache(key)
 
-        {:ok, something} ->
-          something
+		        {:ok, something} ->
+		          something
 
-        _other ->
-          HashColorAvatar.gen_avatar(name, shape: shape, color: color, size: size, border: border) |> cache(key)
-      end
+		        _other ->
+		          HashColorAvatar.gen_avatar(name, set: set, color: color, size: size, border: border) |> cache(key)
+		      end
+    end
 
     conn
     |> put_resp_content_type("image/svg+xml")

@@ -37,6 +37,45 @@ defmodule HashColorAvatar do
     hsv_to_rgb(%{hue: seed, saturation: saturation, value: value}) |> rgb_to_hex
   end
 
+
+  def random_color_pair("complimentary", options \\ []) do
+    seed1 = Enum.random(200..285)
+    seed2 = rem(seed1 + 180, 360) |> abs
+    saturation = Keyword.get(options, :saturation, @default_saturation)
+    value = Keyword.get(options, :value, @default_value)
+
+    color1 = hsv_to_rgb(%{hue: seed1, saturation: saturation, value: value}) |> rgb_to_hex
+    color2 = hsv_to_rgb(%{hue: seed2, saturation: 45, value: value}) |> rgb_to_hex
+    {color1, color2}
+  end 
+
+
+  def random_color_pair("analogous", options) do
+    seed1 = Enum.random(1..359)
+    
+    seed2 = rem(seed1 + 120, 360) |> abs
+    saturation = Keyword.get(options, :saturation, @default_saturation)
+    value = Keyword.get(options, :value, @default_value)
+
+    color1 = hsv_to_rgb(%{hue: seed1, saturation: saturation, value: value}) |> rgb_to_hex
+    color2 = hsv_to_rgb(%{hue: seed2, saturation: 45, value: value}) |> rgb_to_hex
+    {color1, color2}
+  end 
+
+  def random_color_pair(any, options) do
+    seed1 = Enum.random(200..285)
+
+    seed2 = abs(seed1 - 30)
+
+    saturation = Keyword.get(options, :saturation, @default_saturation)
+    value = Keyword.get(options, :value, @default_value)
+
+    color1 = hsv_to_rgb(%{hue: seed1, saturation: saturation, value: value}) |> rgb_to_hex
+    color2 = hsv_to_rgb(%{hue: seed2, saturation: 45, value: value}) |> rgb_to_hex
+    {color1, color2}
+  end 
+    
+
   @doc """
   This function will convert RGB to hex.
 
@@ -157,25 +196,92 @@ defmodule HashColorAvatar do
       end
 
     case shape do
-      "square" ->
+      "set1" ->
         '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{
           size
-        }" height="#{size}" viewBox="300" enable-background="new 5 24.366 90 61.125" xml:space="preserve"><rect width="#{
-          size
-        }" height="#{size}" fill="#{background_color}" ></rect><text fill="white" x="50%" y="65%" text-anchor="middle" style="font: bold #{
-          fontsize
-        }px sans-serif;" >#{get_initial(text)}</text></svg>'
-
-      _other ->
-        '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{
-          size
-        }" height="#{size}" viewBox="300" enable-background="new 5 24.366 90 61.125" xml:space="preserve"><circle cx="#{
+        }" height="#{size}" enable-background="new 5 24.366 90 61.125" xml:space="preserve"><circle cx="#{
           diameter
         }" cy="#{diameter}" r="#{diameter}" stroke="white" stroke-width="#{border}" fill="#{
           background_color
         }" ></circle><text fill="white" x="50%" y="67%" text-anchor="middle" style="font: bold #{
           fontsize
+        }px sans-serif;" >#{get_initial(text)}</text></svg>'        
+
+
+      "set2" ->
+        {color1, color2} = random_color_pair("analogous")
+
+        '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{
+          size
+        }" height="#{size}" xml:space="preserve">
+        <circle cx="#{
+          diameter
+        }" cy="#{diameter}" r="#{diameter - border}" fill-opacity="0.4" stroke="#{color2}" stroke-width="#{border}" fill="#{
+          color2
+        }" ></circle><text fill="#{color1}" x="50%" y="67%" text-anchor="middle" style="font: bold #{
+          fontsize
         }px sans-serif;" >#{get_initial(text)}</text></svg>'
+
+      "set3" ->
+        '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{
+          size
+        }" height="#{size}" enable-background="new 5 24.366 90 61.125" xml:space="preserve"><circle cx="#{
+          diameter
+        }" cy="#{diameter}" r="#{diameter - border}" fill-opacity="0" stroke="#{background_color}" stroke-width="#{border}" fill="#{
+          background_color
+        }" ></circle><text fill="#{background_color}" x="50%" y="67%" text-anchor="middle" style="font: bold #{
+          fontsize
+        }px sans-serif;" >#{get_initial(text)}</text></svg>'
+
+
+      "set4" ->
+        {color1, color2} = random_color_pair("complimentary")
+
+        '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{
+          size
+        }" height="#{size}" xml:space="preserve">
+        <circle cx="#{
+          diameter
+        }" cy="#{diameter}" r="#{diameter - border}" fill-opacity="0.4" stroke="#{color2}" stroke-width="#{border}" fill="#{
+          color2
+        }" ></circle><text fill="#{color1}" x="50%" y="67%" text-anchor="middle" style="font: bold #{
+          fontsize
+        }px sans-serif;" >#{get_initial(text)}</text></svg>'
+
+      "set5" ->
+        {color1, color2} = random_color_pair("complimentaryx")
+
+        '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{
+          size
+        }" height="#{size}" xml:space="preserve">
+        <circle cx="#{
+          diameter
+        }" cy="#{diameter}" r="#{diameter - border}" fill-opacity="0.4" stroke="#{color2}" stroke-width="#{border}" fill="#{
+          color2
+        }" ></circle><text fill="#{color1}" x="50%" y="67%" text-anchor="middle" style="font: bold #{
+          fontsize
+        }px sans-serif;" >#{get_initial(text)}</text></svg>'
+
+      "set6" ->
+
+        '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{
+          size
+        }" height="#{size}" enable-background="new 5 24.366 90 61.125" xml:space="preserve"><rect width="#{
+          size
+        }" height="#{size}" fill="#{background_color}" fill-opacity="0" stroke="#{background_color}" stroke-width="#{border}"></rect><text fill="#{background_color}" x="50%" y="65%" text-anchor="middle" style="font: bold #{
+          fontsize
+        }px sans-serif;" >#{get_initial(text)}</text></svg>' 
+
+      _other ->
+
+        '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{
+          size
+        }" height="#{size}" enable-background="new 5 24.366 90 61.125" xml:space="preserve"><rect width="#{
+          size
+        }" height="#{size}" fill="#{background_color}" ></rect><text fill="white" x="50%" y="65%" text-anchor="middle" style="font: bold #{
+          fontsize
+        }px sans-serif;" >#{get_initial(text)}</text></svg>'        
+
     end
   end
 
