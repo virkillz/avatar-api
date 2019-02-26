@@ -1,6 +1,272 @@
-<div class="jumbotron">
-  <h2><%= gettext "Welcome to %{name}!", name: "Avatar-api" %></h2>
-  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
-  <img src="http://localhost:4000/avatar.svg?name=marry%20jane%20lucia&size=300&shape=rect&color=black" alt="MJ">
-</div>
 
+  <header class="header-global">
+    <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
+      <div class="container">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbar_global">
+          <div class="navbar-collapse-header">
+            <div class="row">
+              <div class="col-6 collapse-brand">
+                <a href="/">
+                  <img src="https://avatar-api.org/avatar.svg?size=50" style="padding: 5px;">
+                  <span style="font-size: 1em; font-weight: 600;">Avatar Api</span>
+                </a>
+              </div>
+              <div class="col-6 collapse-close">
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                  <span></span>
+                  <span></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="nav-link-inner--text">Hex.pm</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="https://github.com/virkillz/hash_color_avatar_elixir.git" class="nav-link">
+                <span class="nav-link-inner--text">Github</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon" href="https://www.linkedin.com/in/arif-yuliannur/" target="_blank" data-toggle="tooltip" title="Say hi at linked in">
+                <i class="fa fa-linkedin" style="font-size: 2em;"></i>
+                <span class="nav-link-inner--text d-lg-none">Linkedin</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon" href="https://github.com/virkillz" target="_blank" data-toggle="tooltip" title="Star us on Github">
+                <i class="fa fa-github" style="font-size: 2em;"></i>
+                <span class="nav-link-inner--text d-lg-none">Github</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="profile-page">
+    <section class="section-profile-cover section-shaped my-0">
+      <!-- Circles background -->
+      <div class="shape shape-style-1 shape-primary alpha-4">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- SVG separator -->
+      <div class="separator separator-bottom separator-skew">
+        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="card card-profile shadow mt--300" style="z-index: 90;">
+          <div class="px-4">
+            <div class="row justify-content-center">
+              <div class="col-lg-3 order-lg-2">
+                <div class="card-profile-image">
+                  <a href="#">
+                    <img src="https://avatar-api.org/avatar.svg?size=300" class="rounded-circle">
+                  </a>
+                </div>
+              </div>               
+              <div class="col-lg-4 order-lg-3 text-lg-right align-self-lg-center stats">
+                <div class="card-profile-stats d-flex justify-content-center">
+                  <div>
+                    <div style="font-weight:800; font-size: 1.5em;">395</div>
+                    <div class="description">Default Color</div>
+                  </div>
+                  <div>
+                    <div style="font-weight:800; font-size: 1.5em;">410 Byte</div>
+                    <div class="description">Avg Avatar Size</div>
+                  </div>
+                </div>
+              </div>             
+              <div class="col-lg-4 order-lg-1">
+                <div class="card-profile-stats d-flex justify-content-center">
+                  <div>
+                    <div style="font-weight:800; font-size: 1.5em;">90 μs</div>
+                    <div class="description">Avg generation time</div>
+                  </div>
+                  <div>
+                    <div style="font-weight:800; font-size: 1.5em;">4,000</div>
+                    <div class="description">RPS Capacity</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center mt-5">
+              <h3>Avatar API</h3>
+
+              <p style="font-size: 1.2em; padding: 40px;">Avatar Api is a <b>free service </b> to generate SVG avatar on the fly. Written in elixir and run on Erlang VM. The code for the library and this website is Open Source. You can embed directly to <code>src</code> inside <code>&lt;img&gt;</code>. No authentication or api key required.</p>             
+
+              Use  <code>&lt;img src=&quot;https://avatar-api.org/avatar.svg?name=Amanda Vonnz&quot; /&gt;</code> <i class="fa fa-long-arrow-right"></i> to generate <img src="https://avatar-api.org/avatar.svg?size=80&name=Amanda Vonnz">
+            </div>
+
+          <div class="text-center border-top" style="margin-top: 50px;">
+              <h4 style="margin-top: 50px;">Generate Initials and Hash Color</h4>
+
+              <p style="font-size: 1.2em; padding: 40px;">Pass <code>?name=Your Name</code> to URL get initial of the name. If the name is more than 2 words it will take initial of the first and the last. It will also generate micro hash from the name so you got different consistent color depends on the given name. </p>
+
+              <code>https://avatar-api.org/avatar.svg?name=Damian Marley</code> <i class="fa fa-long-arrow-right"></i> will generate <img src="https://avatar-api.org/avatar.svg?size=80&name=Damian Marley">
+
+            <div class="text-center" style="padding: 30px; font-size: 1.3em; font-weight: 500;">Other example</div>
+
+            <div class="row" style="margin: 0px 50px;">
+                  <div class="col-sm" style="margin:10px;">
+                    <img src="https://avatar-api.org/avatar.svg?size=80&name=Dorothy Marley" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Dorothy Marley">
+                  </div>
+                  <div class="col-sm" style="margin:10px;">
+                    <img src="https://avatar-api.org/avatar.svg?size=80&name=Deborah Marley" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Deborah Marley">
+                  </div>
+                  <div class="col-sm" style="margin:10px;">
+                    <img src="https://avatar-api.org/avatar.svg?size=80&name=Dian Mahesa" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Dian Mahesa">
+                  </div>
+                  <div class="col-sm" style="margin:10px;">
+                    <img src="https://avatar-api.org/avatar.svg?size=80&name=Donny Munajat" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Donny Munajat">
+                  </div>             
+            </div>              
+            
+          </div>
+
+          <div class="text-center border-top" style="margin-top: 50px;">
+              <h4 style="margin-top: 50px;">Resize on the fly</h4>
+
+              <p style="font-size: 1.2em; padding: 40px;">Pass <code>&size=</code> to URL to specify the size of avatar. </p>             
+
+              <code>https://avatar-api.org/avatar.svg?name=Virkill&size=110</code> <i class="fa fa-long-arrow-right"></i> will generate <img src="https://avatar-api.org/avatar.svg?name=Virkill&size=110">
+
+            <div class="text-center" style="padding: 30px; font-size: 1.3em; font-weight: 500;">Other example</div>
+
+            <div class="row" style="margin: 0px 50px;">
+                  <div class="col-sm" style="margin:10px;">
+                    <img src="https://avatar-api.org/avatar.svg?size=120&name=Qomar" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Qomar">
+                  </div>
+                  <div class="col-sm" style="margin:10px;">
+                    <img src="https://avatar-api.org/avatar.svg?size=100&name=Nathan" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Nathan">
+                  </div>
+                  <div class="col-sm" style="margin:10px;">
+                    <img src="https://avatar-api.org/avatar.svg?size=80&name=Tommy" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Tommy">
+                  </div>
+                  <div class="col-sm" style="margin:10px;">
+                    <img src="https://avatar-api.org/avatar.svg?size=60&name=Lenny" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Lenny">
+                  </div>             
+            </div>              
+            
+          </div>
+
+          <div class="text-center border-top" style="margin-top: 50px;">
+              <h4 style="margin-top: 50px;">Square or Circle</h4>
+
+              <p style="font-size: 1.2em; padding: 40px;">Pass <code>&shape=square</code> to generate square avatar instead of circle. </p>             
+
+              <code>https://avatar-api.org/avatar.svg?name=Dian Sastro Wardoyo&shape=square</code> <i class="fa fa-long-arrow-right"></i> will generate <img src="https://avatar-api.org/avatar.svg?name=Dian Sastro Wardoyo&shape=rect">
+
+            <div class="text-center" style="padding: 30px; font-size: 1.3em; font-weight: 500;">Other example</div>
+
+            <div class="row" style="margin: 0px 50px;">
+                  <div class="col-sm" style="margin:10px;">
+                    <img src="https://avatar-api.org/avatar.svg?&shape=rect&name=Arazka Abrizan" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Arazka Abrizan">
+                  </div>
+                  <div class="col-sm" style="margin:10px;">
+                    <img src="https://avatar-api.org/avatar.svg?&shape=rect&name=Elyn Abrizan" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Elyn Abrizan">
+                  </div>
+                  <div class="col-sm" style="margin:10px;">
+                    <img src="https://avatar-api.org/avatar.svg?&shape=rect&name=Kayla Abrizan" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Kayla Abrizan">
+                  </div>
+                  <div class="col-sm" style="margin:10px;">
+                    <img src="https://avatar-api.org/avatar.svg?&shape=rect&name=VirKill Abrizan" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Virkill Abrizan">
+                  </div>             
+            </div>              
+            
+          </div>          
+
+          <div class="text-center border-top" style="margin-top: 50px;">
+              <h4 style="margin-top: 50px;">Custom color as you wish</h4>
+
+              <p style="font-size: 1.2em; padding: 40px;">Pass <code>&color=tomato</code> to specify any color. It accept CSS color code such as <code>midnightblue</code> or hex code such as <code>#f576ac</code> or to get a surprise you can also put <code>random</code>.</p>             
+
+              <code>https://avatar-api.org/avatar.svg?name=Sundari Sukotjo&shape=square</code> <i class="fa fa-long-arrow-right"></i> will generate <img src="https://avatar-api.org/avatar.svg?name=Samantha Albert&color=tomato">
+
+            <div class="text-center" style="padding: 30px; font-size: 1.3em; font-weight: 500;">Other example</div>
+
+            <div class="row" style="margin: 0px 50px;">
+                  <div class="col-sm" style="margin:10px;">
+                    <img src="https://avatar-api.org/avatar.svg?&shape=rect&name=Tamara&color=black" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Tamara&color=black">
+                  </div>
+                  <div class="col-sm" style="margin:10px;">
+                    <img src="https://avatar-api.org/avatar.svg?&shape=rect&name=Xavier&color=teal" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Xavier&color=teal">
+                  </div>
+                  <div class="col-sm" style="margin:10px;">
+                    <img src="https://avatar-api.org/avatar.svg?&shape=rect&name=Alberto&color=grey" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=Alberto&color=grey">
+                  </div>
+                  <div class="col-sm" style="margin:10px;">
+                    <img src="https://avatar-api.org/avatar.svg?&shape=rect&name=alberto&color=random" data-toggle="tooltip" data-placement="top" title="/avatar.svg?size=80&name=albert&color=random">
+                  </div>             
+            </div>              
+            
+          </div> 
+
+
+
+            <div class="mt-5 py-5 border-top text-center">
+              <div class="row justify-content-center">
+                <div class="col-lg-9">
+                  <p>There are no rate limit for your request. But since currently it runs on the smallest droplet at digitalocean, please be considerate.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="row row-grid align-items-center mb-5">
+        <div class="col-lg-6">
+          <h3 class="text-primary font-weight-light mb-2">The source code is available at github!</h3>
+          <h6 class="mb-0 font-weight-light">If you found improvement without breaking the existing api, submit your Pull Request. Cheers! 🍺</h6>
+        </div>
+        <div class="col-lg-6 text-lg-center btn-wrapper">
+          <a target="_blank" href="https://www.linkedin.com/in/arif-yuliannur/" class="btn btn-neutral btn-icon-only btn-facebook btn-round btn-lg" data-toggle="tooltip" data-original-title="Say hi at linkedin">
+            <i class="fa fa-linkedin"></i>
+          </a>
+          <a target="_blank" href="https://github.com/virkillz" class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg" data-toggle="tooltip" data-original-title="Star on Github">
+            <i class="fa fa-github"></i>
+          </a>
+        </div>
+      </div>
+      <hr>
+      <div class="row align-items-center justify-content-md-between">
+        <div class="col-md-6">
+          <div class="copyright">
+            &copy; 2018
+            <a href="https://virkill.net" target="_blank">VirKill</a>.
+          </div>
+        </div>
+        <div class="col-md-6">
+          <ul class="nav nav-footer justify-content-end">
+            <li class="nav-item">
+              <a href="#" class="nav-link" target="_blank">MIT License</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>

@@ -123,13 +123,13 @@ defmodule HashColorAvatar do
   ## Option
   **:color** can be used to specify background color. By default it will generate hash based on the text given. It will be unique-ish since there are only 359 possible color and there's a chance it looks similar one amongst the other. For the value you can choose "random", any color code recognized by CSS such as "teal", "tomato", also it accept hex code.
 
-  **:shape** by default is circle. You can also choose "rect" for rectangle avatar.
+  **:shape** by default is circle. You can also choose "square" for square avatar.
 
   **:size** You can define how many pixel height and width. Default is 100
 
   ## Examples
 
-      iex> HashColorAvatar.gen_avatar("Samantha Johnson Abigail", [color: "tomato", shape: "rect", size: 200])
+      iex> HashColorAvatar.gen_avatar("Samantha Johnson Abigail", [color: "tomato", shape: "square", size: 200])
       '<svg width="200" height="200"><rect width="200" height="200" fill="tomato" /><text fill="white" x="50%" y="65%" text-anchor="middle" style="font: bold 83.33333333333334px sans-serif;" >SA</text></circle></svg>'
       
 
@@ -155,7 +155,7 @@ defmodule HashColorAvatar do
       end
 
     case shape do
-      "rect" ->
+      "square" ->
         '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{
           size
         }" height="#{size}" viewBox="300" enable-background="new 5 24.366 90 61.125" xml:space="preserve"><rect width="#{
