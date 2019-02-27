@@ -48,7 +48,9 @@ config :avatar_api, AvatarApiWeb.Endpoint,
   ]
 
 # Do not include metadata nor timestamps in development logs
-config :logger, :console, format: "[$level] $message\n"
+config :logger, :console, format: "[$level] $message\n",  compile_time_purge_matching: [
+    [level_lower_than: :warn]
+  ]
 
 # Set a higher stacktrace during development. Avoid configuring such
 # in production as building large stacktraces may be expensive.
