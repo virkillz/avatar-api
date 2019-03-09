@@ -1,7 +1,7 @@
 defmodule AvatarApiWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :avatar_api
 
-  socket("/socket", AvatarApiWeb.UserSocket)
+  # socket("/socket", AvatarApiWeb.UserSocket)
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -17,7 +17,6 @@ defmodule AvatarApiWeb.Endpoint do
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
   if code_reloading? do
-    socket("/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket)
     plug(Phoenix.LiveReloader)
     plug(Phoenix.CodeReloader)
   end

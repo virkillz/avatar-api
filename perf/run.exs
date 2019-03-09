@@ -1,0 +1,55 @@
+conn = %Plug.Conn{
+  adapter: {Plug.Adapters.Cowboy.Conn, :...},
+  assigns: %{},
+  before_send: [],
+  body_params: %{},
+  cookies: %Plug.Conn.Unfetched{aspect: :cookies},
+  halted: false,
+  host: "localhost",
+  method: "GET",
+  owner: nil,
+  params: %{},
+  path_info: ["avatar.svg"],
+  path_params: %{},
+  port: 4000,
+  private: %{
+    AvatarApiWeb.Router => {[], %{}},
+    :phoenix_action => :avatar,
+    :phoenix_controller => AvatarApiWeb.PageController,
+    :phoenix_endpoint => AvatarApiWeb.Endpoint,
+    :phoenix_layout => {AvatarApiWeb.LayoutView, :app},
+    :phoenix_pipelines => [],
+    :phoenix_router => AvatarApiWeb.Router,
+    :phoenix_view => AvatarApiWeb.PageView,
+    :plug_session_fetch => nil,
+  },
+  query_params: %{},
+  query_string: "",
+  remote_ip: {127, 0, 0, 1},
+  req_cookies: %Plug.Conn.Unfetched{aspect: :cookies},
+  req_headers: [
+    {"host", "localhost:4000"},
+    {"connection", "keep-alive"},
+    {"upgrade-insecure-requests", "1"},
+    {"user-agent",
+     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.109 Safari/537.36"},
+    {"accept",
+     "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8"},
+    {"accept-encoding", "gzip, deflate, br"},
+    {"accept-language", "en-US,en;q=0.9"},
+    {"cookie",
+     "_backer_key=SFMyNTY.g3QAAAACbQAAAAtfY3NyZl90b2tlbm0AAAAYSlpKY01TbGczaEh0TTdiK2Eya2c5UT09bQAAABFjdXJyZW50X2JhY2tlcl9pZGEh.XMe0z1qHZ_3MQOr6ZjNETXxIM_chbpDmBNzfo7xsSHw"}
+  ],
+  request_path: "/avatar.svg",
+  resp_body: nil,
+  resp_cookies: %{},
+  resp_headers: [{"cache-control", "max-age=0, private, must-revalidate"}],
+  scheme: :http,
+  script_name: [],
+  state: :unset,
+  status: nil
+}
+
+Benchee.run(%{
+  "avatar"    => fn -> AvatarApiWeb.PageController.avatar_test(%{}) end 
+})

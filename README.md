@@ -1,19 +1,20 @@
 # AvatarApi
 
 
-
-```
-
- 
-MIX_ENV=prod PORT=4000 elixir -pa _build/prod/consolidated -S mix phx.server
-```
-
-
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
   * Install Node.js dependencies with `cd assets && npm install`
   * Start Phoenix endpoint with `mix phx.server`
+
+or if you want to run mix in production you can do this:
+
+```
+
+MIX_ENV=prod mix compile.protocols
+MIX_ENV=prod PORT=4000 elixir -pa _build/prod/consolidated -S mix phx.server
+```
+
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 

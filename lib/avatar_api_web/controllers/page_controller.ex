@@ -33,7 +33,7 @@ defmodule AvatarApiWeb.PageController do
 		        {:ok, something} ->
 		          something
 
-		        _other ->
+		        _other ->             
 		          HashColorAvatar.gen_avatar(name, set: set, color: color, size: size, border: border) |> cache(key)
 		      end
     end

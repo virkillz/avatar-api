@@ -1,0 +1,386 @@
+root@locust-testing:/home/indodax# wrk -t8 -c50 -d10s http://google.com 
+Running 10s test @ http://google.com
+  8 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.96ms   13.84ms 246.56ms   94.49%
+    Req/Sec     1.43k   139.20     1.64k    73.12%
+  114332 requests in 10.01s, 58.88MB read
+Requests/sec:  11420.16
+Transfer/sec:      5.88MB
+
+root@locust-testing:/home/indodax# wrk -t8 -c50 -d10s http://avatar-api.org/avatar.svg 
+Running 10s test @ http://avatar-api.org/avatar.svg
+  8 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.78ms  661.53us  21.67ms   93.76%
+    Req/Sec     3.41k   185.27     3.93k    70.11%
+  272862 requests in 10.10s, 106.95MB read
+Requests/sec:  27016.57
+Transfer/sec:     10.59MB
+
+root@locust-testing:/home/indodax# wrk -t8 -c50 -d10s http://avatar-api.org/avatar.svg 
+Running 10s test @ http://avatar-api.org/avatar.svg
+  8 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.78ms  661.53us  21.67ms   93.76%
+    Req/Sec     3.41k   185.27     3.93k    70.11%
+  272862 requests in 10.10s, 106.95MB read
+Requests/sec:  27016.57
+Transfer/sec:     10.59MB
+
+root@locust-testing:/home/indodax# wrk -t8 -c50 -d10s http://traveloka.com
+Running 10s test @ http://traveloka.com
+  8 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.87ms    2.11ms  66.63ms   93.66%
+    Req/Sec     1.63k   198.91     2.02k    74.50%
+  129575 requests in 10.01s, 35.22MB read
+Requests/sec:  12939.70
+Transfer/sec:      3.52MB
+
+root@locust-testing:/home/indodax# wrk -t8 -c50 -d10s http://detik.com
+Running 10s test @ http://detik.com
+  8 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    12.91ms  791.19us  25.19ms   84.86%
+    Req/Sec   465.55     18.22   500.00     76.50%
+  37134 requests in 10.02s, 17.42MB read
+Requests/sec:   3706.24
+Transfer/sec:      1.74MB
+
+root@locust-testing:/home/indodax# wrk -t8 -c50 -d10s http://kaskus.com
+Running 10s test @ http://kaskus.com
+  8 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   284.87ms    4.79ms 295.00ms   85.42%
+    Req/Sec     9.38      0.52    10.00     62.50%
+  48 requests in 10.10s, 55.36KB read
+Requests/sec:      4.75
+Transfer/sec:      5.48KB
+
+root@locust-testing:/home/indodax# wrk -t8 -c50 -d10s https://ui-avatars.com/api/?name=John+Doe
+Running 10s test @ https://ui-avatars.com/api/?name=John+Doe
+  8 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   295.75ms    6.97ms 349.48ms   87.76%
+    Req/Sec    21.02     11.78    50.00     79.61%
+  1389 requests in 10.02s, 1.72MB read
+Requests/sec:    138.64
+Transfer/sec:    175.60KB
+
+root@locust-testing:/home/indodax# wrk -t8 -c50 -d10s http://kaskus.co.id
+Running 10s test @ http://kaskus.co.id
+  8 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    12.70ms  570.32us  24.78ms   95.04%
+    Req/Sec   473.48     14.81   505.00     87.00%
+  37758 requests in 10.01s, 12.24MB read
+Requests/sec:   3770.32
+Transfer/sec:      1.22MB
+
+root@locust-testing:/home/indodax# wrk -t8 -c50 -d10s http://tokopedia.com
+Running 10s test @ http://tokopedia.com
+  8 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.18ms  456.02us   7.16ms   70.84%
+    Req/Sec     2.76k   158.79     3.16k    66.00%
+  219680 requests in 10.00s, 104.12MB read
+Requests/sec:  21957.32
+Transfer/sec:     10.41MB
+
+root@locust-testing:/home/indodax# wrk -t8 -c50 -d10s http://blibli.com
+Running 10s test @ http://blibli.com
+  8 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    12.89ms  578.55us  37.32ms   92.82%
+    Req/Sec   466.55     15.54   494.00     81.50%
+  37209 requests in 10.03s, 4.08MB read
+Requests/sec:   3711.62
+Transfer/sec:    416.83KB
+
+
+
+Google test (just for fun)
+
+Test against different machine: 4 core GCP
+
+root@locust-testing:/home/indodax# wrk -t8 -c50 -d10s http://google.com 
+Running 10s test @ http://google.com
+  8 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.96ms   13.84ms 246.56ms   94.49%
+    Req/Sec     1.43k   139.20     1.64k    73.12%
+  114332 requests in 10.01s, 58.88MB read
+Requests/sec:  11420.16
+Transfer/sec:      5.88MB
+
+
+
+Test on 1 core 512MB Digital Ocean Droplet
+
+Test against himself
+
+root@avatar-api:~/wrk# wrk -t1 -c50 -d10s http://localhost:4000/avatar.svg
+Running 10s test @ http://localhost:4000/avatar.svg
+  1 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.02ms    8.75ms  66.94ms   79.99%
+    Req/Sec     9.41k   736.28    10.76k    66.00%
+  93645 requests in 10.00s, 52.89MB read
+Requests/sec:   9360.05
+Transfer/sec:      5.29MB
+
+
+
+Test on 1 core 512MB Digital Ocean Droplet
+
+Test against different machine: 8 core GCP
+
+root@elixir-api-test:/home/indodax/avatar-api# wrk -t8 -c50 -d10s --rate 4000 https://avatar-api.org/avatar.svg --latency
+Running 10s test @ https://avatar-api.org/avatar.svg
+  8 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.58s   957.90ms   3.40s    57.97%
+    Req/Sec       -nan      -nan   0.00      0.00%
+  Latency Distribution (HdrHistogram - Recorded Latency)
+ 50.000%    1.56s 
+ 75.000%    2.41s 
+ 90.000%    2.90s 
+ 99.000%    3.31s 
+ 99.900%    3.37s 
+ 99.990%    3.40s 
+ 99.999%    3.41s 
+100.000%    3.41s 
+
+  Detailed Percentile spectrum:
+       Value   Percentile   TotalCount 1/(1-Percentile)
+
+       9.671     0.000000            1         1.00
+     253.823     0.100000         2622         1.11
+     573.439     0.200000         5246         1.25
+     868.351     0.300000         7862         1.43
+    1246.207     0.400000        10488         1.67
+    1563.647     0.500000        13108         2.00
+    1737.727     0.550000        14415         2.22
+    1908.735     0.600000        15724         2.50
+    2074.623     0.650000        17036         2.86
+    2242.559     0.700000        18355         3.33
+    2406.399     0.750000        19667         4.00
+    2478.079     0.775000        20323         4.44
+    2551.807     0.800000        20964         5.00
+    2635.775     0.825000        21628         5.71
+    2723.839     0.850000        22283         6.67
+    2803.711     0.875000        22938         8.00
+    2846.719     0.887500        23265         8.89
+    2897.919     0.900000        23598        10.00
+    2951.167     0.912500        23915        11.43
+    3002.367     0.925000        24257        13.33
+    3049.471     0.937500        24574        16.00
+    3076.095     0.943750        24741        17.78
+    3102.719     0.950000        24896        20.00
+    3135.487     0.956250        25068        22.86
+    3168.255     0.962500        25227        26.67
+    3203.071     0.968750        25396        32.00
+    3219.455     0.971875        25480        35.56
+    3233.791     0.975000        25551        40.00
+    3250.175     0.978125        25640        45.71
+    3264.511     0.981250        25714        53.33
+    3278.847     0.984375        25797        64.00
+    3287.039     0.985938        25841        71.11
+    3295.231     0.987500        25888        80.00
+    3301.375     0.989062        25921        91.43
+    3309.567     0.990625        25961       106.67
+    3317.759     0.992188        26001       128.00
+    3323.903     0.992969        26031       142.22
+    3327.999     0.993750        26051       160.00
+    3332.095     0.994531        26066       182.86
+    3336.191     0.995313        26088       213.33
+    3342.335     0.996094        26112       256.00
+    3344.383     0.996484        26117       284.44
+    3348.479     0.996875        26129       320.00
+    3350.527     0.997266        26135       365.71
+    3356.671     0.997656        26153       426.67
+    3360.767     0.998047        26157       512.00
+    3362.815     0.998242        26164       568.89
+    3364.863     0.998437        26167       640.00
+    3368.959     0.998633        26175       731.43
+    3368.959     0.998828        26175       853.33
+    3373.055     0.999023        26181      1024.00
+    3375.103     0.999121        26182      1137.78
+    3377.151     0.999219        26187      1280.00
+    3379.199     0.999316        26189      1462.86
+    3383.295     0.999414        26193      1706.67
+    3383.295     0.999512        26193      2048.00
+    3385.343     0.999561        26194      2275.56
+    3387.391     0.999609        26195      2560.00
+    3391.487     0.999658        26200      2925.71
+    3391.487     0.999707        26200      3413.33
+    3391.487     0.999756        26200      4096.00
+    3391.487     0.999780        26200      4551.11
+    3391.487     0.999805        26200      5120.00
+    3395.583     0.999829        26201      5851.43
+    3397.631     0.999854        26202      6826.67
+    3397.631     0.999878        26202      8192.00
+    3399.679     0.999890        26204      9102.22
+    3399.679     0.999902        26204     10240.00
+    3399.679     0.999915        26204     11702.86
+    3399.679     0.999927        26204     13653.33
+    3399.679     0.999939        26204     16384.00
+    3399.679     0.999945        26204     18204.44
+    3399.679     0.999951        26204     20480.00
+    3399.679     0.999957        26204     23405.71
+    3405.823     0.999963        26205     27306.67
+    3405.823     1.000000        26205          inf
+#[Mean    =     1577.701, StdDeviation   =      957.897]
+#[Max     =     3403.776, Total count    =        26205]
+#[Buckets =           27, SubBuckets     =         2048]
+----------------------------------------------------------
+  26213 requests in 10.00s, 15.77MB read
+Requests/sec:   2620.76
+Transfer/sec:      1.58MB
+
+
+
+Test on 8 core GCP
+
+Run against different maching : 1 core 512 ram Digital Ocean
+
+root@avatar-api:~/wrk# wrk -t1 -c50 -d10s http://35.240.135.84/avatar.svg
+Running 10s test @ http://35.240.135.84/avatar.svg
+  1 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.54ms  470.14us  14.17ms   95.99%
+    Req/Sec    32.55k     1.16k   34.89k    76.00%
+  323952 requests in 10.00s, 182.95MB read
+Requests/sec:  32390.63
+Transfer/sec:     18.29MB
+
+
+
+
+Test on 8 core GCP 
+
+Run against different test machine : 4 core GCP
+
+root@locust-testing:/home/indodax# wrk -t8 -c50 -d10s http://35.240.135.84/avatar.svg 
+Running 10s test @ http://35.240.135.84/avatar.svg
+  8 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.10ms  533.05us  12.33ms   89.91%
+    Req/Sec     5.50k   476.22     6.65k    70.38%
+  438373 requests in 10.00s, 247.57MB read
+Requests/sec:  43817.40
+Transfer/sec:     24.75MB
+
+
+
+Test on 8 core GCP 
+
+Run against same machine
+
+
+root@elixir-api-test:/home/indodax/avatar-api# wrk -t8 -c50 -d10s --rate 60000 http://localhost/avatar.svg --latency
+Running 10s test @ http://localhost/avatar.svg
+  8 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   742.15ms  564.43ms   2.49s    56.68%
+    Req/Sec       -nan      -nan   0.00      0.00%
+  Latency Distribution (HdrHistogram - Recorded Latency)
+ 50.000%  673.28ms
+ 75.000%    1.21s 
+ 90.000%    1.54s 
+ 99.000%    1.95s 
+ 99.900%    2.27s 
+ 99.990%    2.49s 
+ 99.999%    2.49s 
+100.000%    2.49s 
+
+  Detailed Percentile spectrum:
+       Value   Percentile   TotalCount 1/(1-Percentile)
+
+       0.094     0.000000            1         1.00
+      51.807     0.100000        49880         1.11
+     146.431     0.200000        99763         1.25
+     279.551     0.300000       149621         1.43
+     482.559     0.400000       199508         1.67
+     673.279     0.500000       249437         2.00
+     778.751     0.550000       274302         2.22
+     872.447     0.600000       299204         2.50
+     990.719     0.650000       324113         2.86
+    1092.607     0.700000       349158         3.33
+    1205.247     0.750000       374068         4.00
+    1262.591     0.775000       386536         4.44
+    1313.791     0.800000       399054         5.00
+    1378.303     0.825000       411415         5.71
+    1440.767     0.850000       424025         6.67
+    1492.991     0.875000       436375         8.00
+    1516.543     0.887500       442781         8.89
+    1543.167     0.900000       448901        10.00
+    1576.959     0.912500       455010        11.43
+    1618.943     0.925000       461388        13.33
+    1662.975     0.937500       467548        16.00
+    1688.575     0.943750       470645        17.78
+    1708.031     0.950000       473716        20.00
+    1729.535     0.956250       476839        22.86
+    1758.207     0.962500       479998        26.67
+    1791.999     0.968750       483081        32.00
+    1807.359     0.971875       484677        35.56
+    1823.743     0.975000       486199        40.00
+    1837.055     0.978125       487723        45.71
+    1855.487     0.981250       489291        53.33
+    1881.087     0.984375       490849        64.00
+    1893.375     0.985938       491650        71.11
+    1911.807     0.987500       492409        80.00
+    1938.431     0.989062       493191        91.43
+    1963.007     0.990625       493968       106.67
+    1985.535     0.992188       494741       128.00
+    2006.015     0.992969       495126       142.22
+    2025.471     0.993750       495530       160.00
+    2051.071     0.994531       495926       182.86
+    2080.767     0.995313       496308       213.33
+    2121.727     0.996094       496688       256.00
+    2142.207     0.996484       496879       284.44
+    2160.639     0.996875       497071       320.00
+    2183.167     0.997266       497267       365.71
+    2205.695     0.997656       497474       426.67
+    2222.079     0.998047       497662       512.00
+    2230.271     0.998242       497755       568.89
+    2238.463     0.998437       497850       640.00
+    2246.655     0.998633       497954       731.43
+    2256.895     0.998828       498071       853.33
+    2277.375     0.999023       498145      1024.00
+    2316.287     0.999121       498190      1137.78
+    2328.575     0.999219       498247      1280.00
+    2332.671     0.999316       498289      1462.86
+    2342.911     0.999414       498336      1706.67
+    2375.679     0.999512       498390      2048.00
+    2379.775     0.999561       498417      2275.56
+    2385.919     0.999609       498436      2560.00
+    2404.351     0.999658       498458      2925.71
+    2426.879     0.999707       498482      3413.33
+    2439.167     0.999756       498517      4096.00
+    2441.215     0.999780       498528      4551.11
+    2455.551     0.999805       498531      5120.00
+    2469.887     0.999829       498544      5851.43
+    2473.983     0.999854       498556      6826.67
+    2482.175     0.999878       498571      8192.00
+    2484.223     0.999890       498574      9102.22
+    2488.319     0.999902       498597     10240.00
+    2488.319     0.999915       498597     11702.86
+    2488.319     0.999927       498597     13653.33
+    2490.367     0.999939       498606     16384.00
+    2490.367     0.999945       498606     18204.44
+    2490.367     0.999951       498606     20480.00
+    2492.415     0.999957       498615     23405.71
+    2492.415     0.999963       498615     27306.67
+    2492.415     0.999969       498615     32768.00
+    2492.415     0.999973       498615     36408.89
+    2494.463     0.999976       498628     40960.00
+    2494.463     1.000000       498628          inf
+#[Mean    =      742.149, StdDeviation   =      564.431]
+#[Max     =     2492.416, Total count    =       498628]
+#[Buckets =           27, SubBuckets     =         2048]
+----------------------------------------------------------
+  498636 requests in 10.00s, 281.61MB read
+Requests/sec:  49876.57
+Transfer/sec:     28.17MB
