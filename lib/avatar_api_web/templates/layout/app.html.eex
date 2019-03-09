@@ -35,7 +35,7 @@
   <script src="/assets/vendor/headroom/headroom.min.js"></script>
   <!-- Argon JS -->
   <script src="/assets/js/argon.js?v=1.0.1"></script>
-  <script src="/js/app.js"></script>  
+  <!--<script src="/js/app.js"></script>  -->
 </body>
 
 </html>
