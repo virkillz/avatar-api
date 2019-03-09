@@ -43,6 +43,10 @@ defmodule AvatarApiWeb.PageController do
     |> send_resp(200, return)
   end
 
+  def hello(conn, _params) do
+    text(conn, "hello world")
+  end
+
   def cache(value, key) do
     Cachex.put(:my_cache, key, value)
     value

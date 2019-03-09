@@ -24,7 +24,7 @@ defmodule AvatarApiWeb.Router do
   # Other scopes may use custom stacks.
   scope "/", AvatarApiWeb do
     # pipe_through :api
-
+    get("/hello", PageController, :hello)
     get("/avatar.svg", PageController, :avatar)
   end
 end
